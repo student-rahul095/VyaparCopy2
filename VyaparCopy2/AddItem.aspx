@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vyapar2.Master" AutoEventWireup="true" CodeBehind="AddItem.aspx.cs" Inherits="VyaparCopy2.AddItem" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -24,6 +25,14 @@
                 <div class="form-group">
                     <label for="txtItemName">Item Name *</label>
                     <asp:TextBox ID="txtItemName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtItemName">Item Name1 *</label>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="txtItemName">Item Name2 *</label>
+                    <asp:TextBox ID="txtname2" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="txtItemHSN">Item HSN</label>
@@ -93,7 +102,8 @@
                     </div>
 
                     <div class="pricing-section">
-                        <h3>Wholesale Price <asp:LinkButton ID="btnRemoveWholesale" runat="server"><i class="fas fa-times-circle"></i> Remove</asp:LinkButton></h3>
+                        <h3>Wholesale Price
+                            <asp:LinkButton ID="btnRemoveWholesale" runat="server"><i class="fas fa-times-circle"></i> Remove</asp:LinkButton></h3>
                         <div class="price-inputs">
                             <div class="form-group">
                                 <asp:TextBox ID="txtWholesalePrice" runat="server" CssClass="form-control" placeholder="Wholesale Price"></asp:TextBox>
@@ -212,14 +222,17 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Amla Powder</td>
-                                        <td><asp:TextBox ID="txtQty1" runat="server" CssClass="form-control" Text="1"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtQty1" runat="server" CssClass="form-control" Text="1"></asp:TextBox></td>
                                         <td>
                                             <asp:DropDownList ID="ddlUnit1" runat="server" CssClass="form-control">
                                                 <asp:ListItem Text="KILOGRAMS (KG)" Value="kg"></asp:ListItem>
                                             </asp:DropDownList>
                                         </td>
-                                        <td><asp:TextBox ID="txtPrice1" runat="server" CssClass="form-control" Text="85"></asp:TextBox></td>
-                                        <td><asp:TextBox ID="txtCost1" runat="server" CssClass="form-control" Text="85" ReadOnly="true"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtPrice1" runat="server" CssClass="form-control" Text="85"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtCost1" runat="server" CssClass="form-control" Text="85" ReadOnly="true"></asp:TextBox></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
@@ -230,8 +243,10 @@
                                                 <asp:ListItem Text="None" Value="none"></asp:ListItem>
                                             </asp:DropDownList>
                                         </td>
-                                        <td><asp:TextBox ID="txtPrice2" runat="server" CssClass="form-control" Text="0"></asp:TextBox></td>
-                                        <td><asp:TextBox ID="txtCost2" runat="server" CssClass="form-control" Text="0" ReadOnly="true"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtPrice2" runat="server" CssClass="form-control" Text="0"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtCost2" runat="server" CssClass="form-control" Text="0" ReadOnly="true"></asp:TextBox></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
@@ -242,8 +257,10 @@
                                                 <asp:ListItem Text="None" Value="none"></asp:ListItem>
                                             </asp:DropDownList>
                                         </td>
-                                        <td><asp:TextBox ID="txtPrice3" runat="server" CssClass="form-control" Text="0"></asp:TextBox></td>
-                                        <td><asp:TextBox ID="txtCost3" runat="server" CssClass="form-control" Text="0" ReadOnly="true"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtPrice3" runat="server" CssClass="form-control" Text="0"></asp:TextBox></td>
+                                        <td>
+                                            <asp:TextBox ID="txtCost3" runat="server" CssClass="form-control" Text="0" ReadOnly="true"></asp:TextBox></td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
