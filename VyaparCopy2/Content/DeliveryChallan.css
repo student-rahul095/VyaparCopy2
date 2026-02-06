@@ -1,0 +1,374 @@
+﻿/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 14px;
+}
+
+.main-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+    .header h1 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #666;
+        margin: 0;
+    }
+
+/* Transactions Container Styles */
+.transactions-container {
+    padding: 15px;
+}
+
+.transactions-header {
+    margin-bottom: 15px;
+}
+
+    .transactions-header h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+/* Controls Styles */
+.transactions-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-container {
+    position: relative;
+    width: 230px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 10px 8px 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-outline {
+    background-color: #fff;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+    .btn-outline:hover {
+        background-color: #f8d7da;
+    }
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+.btn-convert {
+    background-color: #f0f0f0;
+    color: #6c757d;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .btn-convert:hover {
+        background-color: #e0e0e0;
+    }
+
+.btn-more {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 5px;
+}
+
+    .btn-more:hover {
+        color: #343a40;
+    }
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .transactions-table th,
+    .transactions-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .transactions-table thead {
+        background-color: #f8f9fa;
+    }
+
+    .transactions-table th {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .transactions-table tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+.th-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sortable {
+    cursor: pointer;
+}
+
+.sort-icon,
+.filter-icon {
+    font-size: 12px;
+    color: #adb5bd;
+}
+
+.due-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.overdue {
+    font-size: 12px;
+    color: #999;
+    margin-top: 3px;
+}
+
+.status-open {
+    color: #28a745;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .modal-header h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+.close {
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+    .close:hover {
+        color: #333;
+    }
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .transactions-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .transactions-table {
+        font-size: 13px;
+    }
+
+        .transactions-table th,
+        .transactions-table td {
+            padding: 10px 8px;
+        }
+
+    .btn-convert {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}
+
+
+/*Additional CSS for Dropdown Menu*/
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    min-width: 120px;
+    padding: 5px 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        color: #16181b;
+        text-decoration: none;
+        background-color: #f8f9fa;
+    }
+
+.converted {
+    background-color: #e0e0e0;
+    color: #28a745;
+}
