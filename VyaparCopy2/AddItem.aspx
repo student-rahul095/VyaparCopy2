@@ -42,13 +42,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="txtItemHSN">Item HSN1</label>
-                    <div class="input-with-icon">
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-                <div class="form-group">
                     <label for="txtItemCode">Item Code</label>
                     <div class="input-with-button">
                         <asp:TextBox ID="txtItemCode" runat="server" CssClass="form-control" Text="38632121338"></asp:TextBox>
