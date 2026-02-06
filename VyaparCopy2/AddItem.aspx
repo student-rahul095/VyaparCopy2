@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <label for="txtItemName">Item Name1 *</label>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtname1" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="txtItemName">Item Name2 *</label>
